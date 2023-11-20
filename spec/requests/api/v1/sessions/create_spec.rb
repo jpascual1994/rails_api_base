@@ -22,6 +22,7 @@ describe 'POST api/v1/users/sign_in' do
 
     it_behaves_like 'there must not be a Set-Cookie in Header'
     it_behaves_like 'does not check authenticity token'
+    it_behaves_like 'slow request'
 
     it 'returns success' do
       expect(response).to be_successful

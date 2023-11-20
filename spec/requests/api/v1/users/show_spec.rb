@@ -6,6 +6,7 @@ describe 'GET api/v1/users/:id' do
   let(:user) { create(:user) }
 
   it_behaves_like 'there must not be a Set-Cookie in Header'
+  it_behaves_like 'slow request'
 
   it 'returns success' do
     subject
