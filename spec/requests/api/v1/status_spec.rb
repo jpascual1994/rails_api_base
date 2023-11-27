@@ -7,6 +7,8 @@ describe 'GET api/v1/status' do
     get api_v1_status_path, as: :json
   end
 
+  it_behaves_like 'slow request'
+
   it 'returns status 200 ok' do
     expect(response).to be_successful
   end

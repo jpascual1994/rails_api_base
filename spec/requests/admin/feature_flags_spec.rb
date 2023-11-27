@@ -9,6 +9,8 @@ describe 'GET admin/feature-flags', openapi: false do
     context 'with a valid session' do
       before { sign_in user }
 
+      it_behaves_like 'slow request'
+
       it 'shows the feature flags page' do
         expect(subject).to redirect_to('/admin/feature-flags/features')
       end

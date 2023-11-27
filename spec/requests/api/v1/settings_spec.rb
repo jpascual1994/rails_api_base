@@ -11,6 +11,8 @@ describe 'GET api/v1/settings/must_update' do
     }
   end
 
+  it_behaves_like 'slow request'
+
   context 'with correct settings' do
     before { create(:setting_version) }
 
