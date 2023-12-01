@@ -83,4 +83,12 @@ describe User do
       end
     end
   end
+
+  describe 'flaky' do
+    $number = [0, 1]
+
+    it 'fails' do
+      expect($number.shift).to eq(1)
+    end
+  end
 end
